@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finvisor - Virtual Stock and Insurance Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+        }
+
+        .container-a {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+
+        header {
+        background-color: #1a237e;
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        }
+
+        nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .logo {
+        font-size: 24px;
+        font-weight: 700;
+        }
+
+        .nav-links {
+        display: flex;
+        gap: 20px;
+        }
+
+        .nav-links a {
+        padding-top: 8px;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+        color: #64b5f6;
+        }
+
+        .nav-links .auth-buttons {
+        display: flex;
+        gap: 10px;
+        }
+
+        .nav-links .auth-buttons a {
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links .auth-buttons a.login {
+        border: 1px solid #fff;
+        }
+
+        .nav-links .auth-buttons a.signup {
+        background-color: #64b5f6;
+        color: #1a237e;
+        }
+
+        .nav-links .auth-buttons a:hover {
+        background-color: #fff;
+        color: #1a237e;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #455a64;
+        }
+
+        .mission {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .team-section h2{
+            padding-left: 47%;
+            padding-right: 50%;
+            /* width: 100%; */
+        }
+
+        .team-member {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1a237e;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #64b5f6;
+            border: 4px solid #1a237e;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<div class="animated-bg"></div>
+    <header>
+        <nav class="container-a">
+            <div class="logo">Finvisor</div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index2.html">About</a>
+                <a href="/bot.html">Chat</a>
+                <div class="auth-buttons">
+                    <a href="/login.html" class="login">Login</a>
+                    <a href="/signup.html" class="signup">Signup</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container"></main>
+        <section class="intro section">
+            <h1>About Finvisor</h1>
+            <p>Your trusted partner in financial decision-making</p>
+        </section>
+
+        <section class="mission section">
+            <h2>Our Mission</h2>
+            <p>At FinViser, we are driven by a profound mission: to democratize financial advice and empower individuals at all levels to make informed decisions about their investments and insurance needs. We recognize that the financial world can be intimidating and challenging to navigate, particularly for those who may lack access to personalized and high-quality financial guidance. Historically, such advice has often been reserved for the wealthy, leaving many without the support they need to make sound financial decisions.
+                <br><br>
+
+                Our goal is to break down these barriers by leveraging state-of-the-art AI technology to provide equitable and personalized financial advice. By utilizing sophisticated algorithms and data analytics, we transform complex financial data into actionable insights tailored to each individual’s unique situation. Our virtual advisor harnesses this technology to deliver accurate, data-driven recommendations that cater to a diverse range of financial needs and goals.
+                <br><br>
+                
+                At FinViser, we believe that everyone, regardless of their financial status or background, deserves access to premium financial guidance. Our platform is designed to serve as an accessible and inclusive resource for individuals at every stage of their financial journey. Whether you're just beginning to build your investment portfolio, seeking to optimize your insurance coverage, or planning for long-term financial security, our services are here to support you.
+                <br><br>
+                
+                We strive to make high-quality financial advice not only available but also understandable and actionable. Our mission extends beyond mere accessibility; we are dedicated to enhancing financial literacy and enabling individuals to confidently navigate their financial futures. By providing tools and insights that were once out of reach, we aim to level the playing field and ensure that everyone has the opportunity to achieve their financial aspirations.
+                <br><br>
+
+                At the heart of FinViser’s mission is the belief that financial empowerment leads to better outcomes for individuals and communities alike. We are committed to making expert financial guidance accessible to all, fostering a more informed and financially secure society.
+                
+                </p>
+        </section>
+
+        <section class="team-section">
+            <h2><u>ROLES</u></h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Sarthak">
+                    <h3>Sarthak</h3>
+                    <p>Team Leader</p>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Aman Deep Singh">
+                    <h3>Aman Deep Singh</h3>
+                    <p>Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Archit Gupta">
+                    <h3>Archit Gupta</h3>
+                    <p>Model Trainer</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline section">
+            <h2>Our Journey</h2>
+            <div class="timeline-container">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2018</h3>
+                        <p>Finvisor founded</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2019</h3>
+                        <p>Launch of our first AI-powered stock analysis tool</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2020</h3>
+                        <p>Expansion into insurance advisory services</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2021</h3>
+                        <p>Reached 1 million users milestone</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2022</h3>
+                        <p>Launched mobile app for iOS and Android</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2023</h3>
+                        <p>Introduced advanced portfolio management features</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Finvisor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (isElementInViewport(section)) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

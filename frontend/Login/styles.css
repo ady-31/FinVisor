@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #8cc0e1, #33130a);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+}
+
+.login-box {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: none;
+    background: transparent;
+    transition: 0.5s;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.3s;
+}
+
+.input-group input:focus ~ .input-highlight,
+.input-group input:valid ~ .input-highlight {
+    width: 100%;
+}
+
+.login-btn,
+.submit-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #0e0d0d;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-btn:hover,
+.submit-btn:hover {
+    background: #bcbaba;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #575151,
+                0 0 25px #575151,
+                0 0 50px #575151,
+                0 0 100px #575151;
+}
+
+.submit-btn {
+    background: #9cb9cb;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #353232;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.signup-link {
+    margin-top: 20px;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: -40px;
+}
+
+.shape-2 {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+    right: -60px;
+}
+
+.shape-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    left: -30px;
+}

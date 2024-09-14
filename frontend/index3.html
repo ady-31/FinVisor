@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finvisor - Virtual Stock and Insurance Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+        }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+
+        header {
+        background-color: #1a237e;
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        }
+
+        nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .logo {
+        font-size: 24px;
+        font-weight: 700;
+        }
+
+        .nav-links {
+        display: flex;
+        gap: 20px;
+        }
+
+        .nav-links a {
+        padding-top: 8px;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+        color: #64b5f6;
+        }
+
+        .nav-links .auth-buttons {
+        display: flex;
+        gap: 10px;
+        }
+
+        .nav-links .auth-buttons a {
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links .auth-buttons a.login {
+        border: 1px solid #fff;
+        }
+
+        .nav-links .auth-buttons a.signup {
+        background-color: #64b5f6;
+        color: #1a237e;
+        }
+
+        .nav-links .auth-buttons a:hover {
+        background-color: #fff;
+        color: #1a237e;
+        }
+    </style>
+</head>
+<div class="animated-bg"></div>
+    <header>
+        <nav class="container">
+            <div class="logo">Finvisor</div>
+            <div class="nav-links">
+                <a href="/index1.html">Home</a>
+                <a href="/index2.html">About</a>
+                <a href="/index3.html">Chat</a>
+                <div class="auth-buttons">
+                    <a href="/login" class="login">Login</a>
+                    <a href="/signup" class="signup">Signup</a>
+                </div>
+            </div>
+        </nav>
+    </header>

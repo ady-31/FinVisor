@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #8cc0e1, #33130a); /* Match login page gradient */
+}
+
+header {
+    display: none; /* Hide the header completely */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 0; /* Ensure no extra margin */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Match login page box color */
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-header h1 {
+    margin-bottom: 0.5rem;
+    color: #fff; /* Match login page text color */
+}
+
+.form-header p {
+    color: #000000; /* Match login page subtext color */
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #000000; /* Match login page label color */
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-bottom: 2px solid #fff; /* Match login page input border color */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff; /* Match login page input text color */
+    background: transparent;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #9cb9cb; /* Match login page submit button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bcaaaa; /* Match login page submit button hover color */
+}
+
+.error {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #000000; /* Match login page link color */
+}
+
+.login-link a {
+    color: #000000; /* Match login page link color */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+/* 
+footer {
+    background-color: #7895a7;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+} */
